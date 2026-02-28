@@ -102,15 +102,17 @@ const DEFAULT_PROJECTS = ["Website Redesign", "Mobile App", "API Platform", "Mar
 
 ### 3.4 Seed Data
 
-On first load (empty localStorage), create these tasks:
+On first load (empty localStorage), create these tasks with **fixed string IDs** (not `Date.now()`):
 
-| Title | Description | Priority | Column | Assignee | Project |
-|-------|------------|----------|--------|----------|---------|
-| Design homepage layout | Create wireframes and mockups | high | todo | Alex | Website Redesign |
-| Set up project repo | (none) | medium | todo | Jordan | API Platform |
-| API integration | Connect to backend services | high | in-progress | Sam | API Platform |
-| Write unit tests | (none) | low | in-progress | Taylor | Mobile App |
-| Initial research | Market analysis complete | medium | done | Morgan | Marketing |
+| ID | Title | Description | Priority | Column | Assignee | Project |
+|----|-------|------------|----------|--------|----------|---------|
+| "1" | Design homepage layout | Create wireframes and mockups | high | todo | Alex | Website Redesign |
+| "2" | Set up project repo | (none) | medium | todo | Jordan | API Platform |
+| "3" | API integration | Connect to backend services | high | in-progress | Sam | API Platform |
+| "4" | Write unit tests | (none) | low | in-progress | Taylor | Mobile App |
+| "5" | Initial research | Market analysis complete | medium | done | Morgan | Marketing |
+
+Note: Only seed tasks use fixed IDs. All user-created tasks, comments, attachments, and chat messages use `Date.now().toString()` for their IDs.
 
 ---
 
